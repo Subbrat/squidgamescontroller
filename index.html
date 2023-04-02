@@ -2,16 +2,52 @@
 <html>
 <head>
     <title>Red Light Green Light Game</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        body {
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-blur: 5px;
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+    </style>
 </head>
 <body>
     <h1>Red Light Green Light Game</h1>
     <p>Push the play button to start the music.</p>
-    <button id="playBtn">Play Music</button>
-    <button id="redBtn">Red Light</button>
-    <button id="greenBtn">Green Light</button>
-    <button id="redSoundBtn">Play Red Light Sound</button>
-    <button id="greenSoundBtn">Play Green Light Sound</button>
+    <div class="container">
+        <button id="playBtn">Play Music</button>
+        <button id="redBtn">Red Light</button>
+        <button id="greenBtn">Green Light</button>
+    </div>
+    <div class="container">
+        <button id="redSoundBtn">Play Red Light Sound</button>
+        <button id="greenSoundBtn">Play Green Light Sound</button>
+    </div>
     <audio id="music">
         <source src="bg.m4a" type="audio/mpeg">
     </audio>
@@ -19,13 +55,13 @@
         <source src="gr.mp3" type="audio/mpeg">
     </audio>
     <audio id="greenSound">
-        <source src="gr.mp3" type="audio/mpeg">
+        <source src="gl.mp3" type="audio/mpeg">
     </audio>
     <audio id="independentRedSound">
         <source src="gr.mp3" type="audio/mpeg">
     </audio>
     <audio id="independentGreenSound">
-        <source src="gr.mp3" type="audio/mpeg">
+        <source src="gl.mp3" type="audio/mpeg">
     </audio>
     <script src="script.js"></script>
 </body>
